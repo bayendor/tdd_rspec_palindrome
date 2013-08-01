@@ -78,5 +78,51 @@ describe Palindrome do
         ).to be_true
       end
     end
+
+    describe "for numbers as strings" do
+      it "is false for 123" do
+        expect(Palindrome.palindrome?('123')).to be_false
+      end
+
+      it "is true for 111" do
+        expect(Palindrome.palindrome?('111')).to be_true
+      end
+
+      it "is true for 1.01" do
+        expect(Palindrome.palindrome?('1.01')).to be_true
+      end
+
+      it "is true for $1,001" do
+        expect(Palindrome.palindrome?('$1,001')).to be_true
+      end
+    end
+
+    describe "for numbers as literals" do
+      it "is true for 1" do
+        expect(Palindrome.palindrome?(1)).to be_true
+      end
+
+      it "is true for 11" do
+        expect(Palindrome.palindrome?(11)).to be_true
+      end
+
+      it "is false for 12" do
+        expect(Palindrome.palindrome?(12)).to be_false
+      end
+
+      it "is true for 121" do
+        expect(Palindrome.palindrome?(121)).to be_true
+      end
+
+      it "is false for 123" do
+        expect(Palindrome.palindrome?(123)).to be_false
+      end
+
+      it "is true for 1.01" do
+        expect(Palindrome.palindrome?(1.01)).to be_true
+      end
+    end
+
   end
+
 end
