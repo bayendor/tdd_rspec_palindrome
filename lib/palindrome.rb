@@ -10,9 +10,7 @@ class Palindrome
       characters = string.split('')
       first_character = characters.shift
       last_character = characters.pop
-      rest_of_string = characters.join('')
-      first_character == last_character &&
-          palindrome?(rest_of_string)
+      first_character == last_character && palindrome?(characters.join)
     end
   end
 end

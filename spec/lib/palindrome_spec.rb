@@ -31,7 +31,7 @@ describe Palindrome do
       end
     end
 
-    describe "for three letter strings" do
+    describe "for three or more letter strings" do
       it "is true if the first and last character match" do
         expect(Palindrome.palindrome?('aba')).to be_true
       end
